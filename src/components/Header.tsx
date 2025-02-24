@@ -6,6 +6,7 @@ import { Transition } from '@headlessui/react';
 import { HiOutlineXMark, HiBars3 } from 'react-icons/hi2';
 
 
+
 import Container from './Container';
 
 import { menuItems } from '@/data/menuItems';
@@ -23,7 +24,7 @@ const Header: React.FC = () => {
                 <nav className="shadow-md md:shadow-none bg-white md:bg-transparent mx-auto flex justify-between items-center py-2 px-5 md:py-10">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-2">
-                        <img src="/logo.png" alt="Butter Logo" className="w-50 h-10 object-contain" />
+                        <img src="/images/logo.png" alt="Butter Logo" className="w-50 h-10 object-contain" />
                     </Link>
 
                     {/* Desktop Menu */}

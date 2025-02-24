@@ -37,6 +37,7 @@ export const tiers: IPricing[] = [
         name: 'Licensing & Enterprise',
         price: 'Custom Pricing',
         features: [
+            'All the Premium features plus:',
             'Unlimited Claim Transactions',
             'Food & Beverage Distributors',
             'Restaurant Management Software Provider',

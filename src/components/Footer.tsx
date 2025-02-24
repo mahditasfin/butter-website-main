@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
             <div className="max-w-7xl w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-10">
                 <div>
                     <Link href="/" className="flex items-center gap-2">
-                    <img src="/logo.png" alt="Butter Logo" className="w-50 h-10 object-contain" />
+                    <img src="/images/logo.png" alt="Butter Logo" className="w-50 h-10 object-contain" />
                 
                     </Link>
                     <p className="mt-3.5 text-foreground-accent">

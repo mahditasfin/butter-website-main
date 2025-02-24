@@ -23,7 +23,7 @@ export const benefits: IBenefit[] = [
                 icon: <FiCheckCircle size={26} />
             }
         ],
-        imageSrc: "/demo1.gif"
+        imageSrc: "/images/demo1.gif"
     },
     {
         title: "Claim Communication",
@@ -45,7 +45,7 @@ export const benefits: IBenefit[] = [
                 icon: <FiClock size={26} />
             }
         ],
-        imageSrc: "/hero2.png"
+        imageSrc: "/images/hero2.png"
     },
     {
         title: "Claim Reconciliation",
@@ -67,6 +67,6 @@ export const benefits: IBenefit[] = [
                 icon: <FiRepeat size={26} />
             }
         ],
-        imageSrc: "/hero3.gif"
+        imageSrc: "/images/hero3.gif"
     },
 ]
