@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaUtensils, FaStore, FaWarehouse, FaMoneyCheckAlt } from 'react-icons/fa'; // Import Icons
-import Image from 'next/image';
 
 // Integration Data
 const integrations = [

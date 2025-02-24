@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import React from 'react';
-import { FaFingerprint } from 'react-icons/fa';
 
 import { siteDetails } from '@/data/siteDetails';
 import { footerDetails } from '@/data/footer';
@@ -34,8 +33,7 @@ const Footer: React.FC = () => {
 
                     {footerDetails.email && <a href={`mailto:${footerDetails.email}`}  className="block text-foreground-accent hover:text-foreground">Email: {footerDetails.email}</a>}
 
-                    {footerDetails.telephone && <a href={`tel:${footerDetails.telephone}`} className="block text-foreground-accent hover:text-foreground">Phone: {footerDetails.telephone}</a>}
-
+              
                     {footerDetails.socials && (
                         <div className="mt-5 flex items-center gap-5 flex-wrap">
                             {Object.keys(footerDetails.socials).map(platformName => {
