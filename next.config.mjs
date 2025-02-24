@@ -1,10 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    output: 'export',
     reactStrictMode: true,
     images: {
-      domains: ["buttersystem.com", "localhost"], // Add image hosting domains if needed
+      unoptimized: true, // Required for static export
     },
-    trailingSlash: true, // Useful for static exports
-  };
+    trailingSlash: true,
+  }
   
-  export default nextConfig;
+  export default nextConfig
