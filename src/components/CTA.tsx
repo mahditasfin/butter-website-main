@@ -1,110 +1,110 @@
 "use client";
 
-import { ctaDetails } from "@/data/cta";
 import { useState } from "react";
+import { ctaDetails } from "@/data/cta";
 
 const CTA: React.FC = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    const data = new FormData(e.currentTarget);
+    data.append("form-name", "demo");
+    await fetch("/", { method: "POST", body: data });
+    setSent(true);
+    setLoading(false);
+  };
 
   return (
-    <section id="cta" className="mt-10 mb-5 lg:my-20">
-      <div className="relative z-10 mx-auto rounded-3xl bg-[#050a02] bg-[linear-gradient(to_right,#12170f_1px,transparent_1px),linear-gradient(to_bottom,#12170f_1px,transparent_1px)] bg-[size:6rem_4rem] opacity-95">
-        {/* radial tint */}
-        <div className="absolute inset-0 rounded-3xl bg-[radial-gradient(circle_600px_at_50%_500px,#1C1C02,transparent)]" />
-
-        <div className="relative flex flex-col gap-10 px-6 py-12 text-white sm:px-10 sm:py-16 md:flex-row lg:px-20 lg:py-20">
-          {/* ────────── LEFT – FORM ────────── */}
+    <section id="cta" className="my-24">
+      <div className="mx-auto max-w-6xl rounded-3xl bg-[#050a02] p-14 lg:p-16 text-white">
+        <div className="flex flex-col gap-16 lg:gap-20 md:flex-row">
+          {/* LEFT – form */}
           <div className="w-full md:w-1/2">
-            {submitted ? (
-              <div className="rounded-xl bg-green-50/10 p-8 text-center md:text-left">
-                <h3 className="mb-3 text-2xl font-semibold text-green-200">
-                  Thank you!
-                </h3>
-                <p className="text-green-100">
-                  We’ll reach out shortly to schedule your personalised demo.
-                </p>
-              </div>
+            {sent ? (
+              <p className="rounded-xl bg-green-50/10 p-10 text-center md:text-left">
+                Thanks! We’ll reach out soon.
+              </p>
             ) : (
               <form
                 name="demo"
                 method="POST"
                 data-netlify="true"
-                netlify-honeypot="bot-field"
-                className="flex flex-col gap-5"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  const data = new FormData(e.currentTarget);
-                  data.append("form-name", "demo");
-                  fetch("/", { method: "POST", body: data }).then(() =>
-                    setSubmitted(true)
-                  );
-                }}
+                className="space-y-6"
+                onSubmit={handleSubmit}
               >
-                <input type="hidden" name="bot-field" />
-                <h3 className="text-2xl font-semibold">Book a demo</h3>
+                <input type="hidden" name="form-name" value="demo" />
 
-                {/** Re-usable input component */}
-                {([
-                  { label: "Name", name: "name", type: "text", ph: "Jane Doe" },
-                  {
-                    label: "Work E-mail",
-                    name: "email",
-                    type: "email",
-                    ph: "jane@restaurant.com",
-                  },
-                  {
-                    label: "Company",
-                    name: "company",
-                    type: "text",
-                    ph: "Good Eats Inc.",
-                  },
-                ] as const).map((f) => (
-                  <label key={f.name} className="flex flex-col text-sm">
-                    {f.label}
-                    <input
-                      name={f.name}
-                      type={f.type}
-                      required
-                      placeholder={f.ph}
-                      className="mt-2 rounded-lg bg-[#1e2329] px-4 py-3 placeholder-gray-400
-                                 ring-1 ring-[#2d333b] focus:outline-none
-                                 focus:ring-2 focus:ring-yellow-500"
-                    />
-                  </label>
-                ))}
+                <h3 className="text-3xl font-semibold">Book a demo</h3>
 
-                {/* Message */}
                 <label className="flex flex-col text-sm">
-                  Message&nbsp;(optional)
-                  <textarea
-                    name="message"
-                    rows={3}
-                    placeholder="Tell us a bit about your workflow…"
-                    className="mt-2 resize-none rounded-lg bg-[#1e2329] px-4 py-3 placeholder-gray-400
-                               ring-1 ring-[#2d333b] focus:outline-none
-                               focus:ring-2 focus:ring-yellow-500"
+                  Your Name:
+                  <input
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="Jane Doe"
+                    className="mt-2 rounded-lg bg-[#1e2329] px-5 py-4 placeholder-gray-400
+                               ring-1 ring-[#2d333b] focus:ring-2 focus:ring-yellow-500"
                   />
                 </label>
 
-                {/* Submit */}
+                <label className="flex flex-col text-sm">
+                  Your Email:
+                  <input
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="jane@org.com"
+                    className="mt-2 rounded-lg bg-[#1e2329] px-5 py-4 placeholder-gray-400
+                               ring-1 ring-[#2d333b] focus:ring-2 focus:ring-yellow-500"
+                  />
+                </label>
+
+                <label className="flex flex-col text-sm">
+                  Company:
+                  <input
+                    name="company"
+                    type="text"
+                    required
+                    placeholder="Good Eats Inc."
+                    className="mt-2 rounded-lg bg-[#1e2329] px-5 py-4 placeholder-gray-400
+                               ring-1 ring-[#2d333b] focus:ring-2 focus:ring-yellow-500"
+                  />
+                </label>
+
+                <label className="flex flex-col text-sm">
+                  Message:
+                  <textarea
+                    name="message"
+                    rows={4}
+                    placeholder="Tell us a bit about your workflow…"
+                    className="mt-2 rounded-lg bg-[#1e2329] px-5 py-4 placeholder-gray-400
+                               ring-1 ring-[#2d333b] focus:ring-2 focus:ring-yellow-500"
+                  />
+                </label>
+
                 <button
                   type="submit"
-                  className="mx-auto mt-2 w-max rounded-full bg-yellow-400 px-10 py-3 font-semibold
-                             text-black shadow-md transition hover:bg-yellow-500
-                             focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-offset-2"
+                  disabled={loading}
+                  className="mx-auto block rounded-full bg-yellow-400 px-12 py-4
+                             text-lg font-semibold text-black transition
+                             hover:bg-yellow-500 disabled:opacity-60"
                 >
-                  Book&nbsp;a&nbsp;Demo
+                  {loading ? "Sending…" : "Book a Demo"}
                 </button>
               </form>
             )}
           </div>
 
-          {/* ────────── RIGHT – COPY ────────── */}
+          {/* RIGHT – copy */}
           <div className="flex w-full flex-col items-center justify-center text-center md:w-1/2 md:items-start md:text-left">
-            <h2 className="mb-4 max-w-2xl text-3xl font-semibold leading-tight sm:text-4xl lg:text-5xl">
+            <h2 className="mb-6 max-w-2xl text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
               {ctaDetails.heading}
             </h2>
-            <p className="mx-auto max-w-xl md:mx-0 md:px-0">
+            <p className="max-w-md text-lg opacity-80 lg:text-xl">
               {ctaDetails.subheading}
             </p>
           </div>
