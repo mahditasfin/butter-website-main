@@ -37,7 +37,7 @@ const Header: React.FC = () => {
                             </li>
                         ))}
                         <li>
-                            <Link href="https://observant-tapir-9e9.notion.site/22b6a4fa5b6381bb85fce58d3eb487fd?pvs=105" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
+                            <Link href="https://calendly.com/vin-puleio/45min" className="text-black bg-primary hover:bg-primary-accent px-8 py-3 rounded-full transition-colors">
                                 Book A Demo
                             </Link>
                         </li>
