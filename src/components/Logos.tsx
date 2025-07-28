@@ -21,8 +21,8 @@ const Logos = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">Claim processing time cut into half</h3>
-              <p className="text-gray-600">with streamlined steps</p>
+              <h3 className="text-lg font-semibold mb-2"> 60-second submissions</h3>
+              <p className="text-gray-600">Snap 3 photos, tap send, and you’re done</p>
               <div className="hidden md:block absolute right-0 top-1/2 w-8 h-0.5 bg-gray-300 translate-x-full" />
             </div>
   
@@ -44,8 +44,8 @@ const Logos = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">100 labor hours</h3>
-              <p className="text-gray-600">are saved annually per location</p>
+              <h3 className="text-lg font-semibold mb-2">One app for all claims</h3>
+              <p className="text-gray-600">Say goodbye to texting, emails, and portal logins</p>
               <div className="hidden md:block absolute right-0 top-1/2 w-8 h-0.5 bg-gray-300 translate-x-full" />
             </div>
   
@@ -66,8 +66,8 @@ const Logos = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">$5k/year per location in cost savings</h3>
-              <p className="text-gray-600">due to improved tracking</p>
+              <h3 className="text-lg font-semibold mb-2">Cut food costs by 1–4%</h3>
+              <p className="text-gray-600"> Quickly capture refunds on damaged, spoiled, or incorrect deliveries with simple photo proof</p>
             </div>
           </div>
         </div>
