@@ -45,7 +45,7 @@ const Logos = () => {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold mb-2">100 labor hours</h3>
-              <p className="text-gray-600">are saved annually</p>
+              <p className="text-gray-600">are saved annually per location</p>
               <div className="hidden md:block absolute right-0 top-1/2 w-8 h-0.5 bg-gray-300 translate-x-full" />
             </div>
   
@@ -66,7 +66,7 @@ const Logos = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold mb-2">$5k/year in cost savings</h3>
+              <h3 className="text-lg font-semibold mb-2">$5k/year per location in cost savings</h3>
               <p className="text-gray-600">due to improved tracking</p>
             </div>
           </div>
