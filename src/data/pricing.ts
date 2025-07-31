@@ -3,7 +3,7 @@ import { IPricing } from "@/types";
 export const tiers: IPricing[] = [
     {
         name: 'Lite Version',
-        price: 'Book a demo',
+        price: 'Book A Demo',
         features: [
             'Automated Refund Management',
             'User-Friendly Mobile Interface',
@@ -21,7 +21,7 @@ export const tiers: IPricing[] = [
     },
     {
         name: 'Premium Version',
-        price:'Coming soon',
+        price:'Coming Soon',
         features: [
             'All the Lite features plus:',
             'Multi-User Permissions',
