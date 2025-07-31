@@ -24,6 +24,7 @@ const HomePage: React.FC = () => {
         >
           <Pricing />
         </Section>
+        <FAQ />
 
         <Section
           id="testimonials"
@@ -34,7 +35,6 @@ const HomePage: React.FC = () => {
         </Section>
         
         <CTA />
-        <FAQ />
       </Container>
     </>
   );
