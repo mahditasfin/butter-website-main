@@ -19,7 +19,7 @@ const HomePage: React.FC = () => {
 
         <Section
           id="pricing"
-          title="Features"
+          title="Pricing"
           description="Get Started With Free 2 Months Trial Available Now!"
         >
           <Pricing />
