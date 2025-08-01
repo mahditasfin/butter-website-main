@@ -22,7 +22,7 @@ const Logos = () => {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold mb-2"> 60-second submissions</h3>
-              <p className="text-gray-600">Snap 3 photos, tap send, and you’re done</p>
+              <p className="text-gray-600">Snap 3 photos, tap send, and you’re done         </p>
               <div className="hidden md:block absolute right-0 top-1/2 w-8 h-0.5 bg-gray-300 translate-x-full" />
             </div>
   
