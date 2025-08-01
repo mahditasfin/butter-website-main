@@ -44,7 +44,7 @@ const PricingColumn: React.FC<Props> = ({ tier, highlight }) => {
             }
           )}
         >
-          Get Started
+          Book a Demo
         </Link>
       </div>
 
