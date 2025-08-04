@@ -4,7 +4,7 @@ import { IBenefit } from "@/types";
 
 export const benefits: IBenefit[] = [
   {
-    title: "Claim Initiation",
+    title: "Submit Claims in 60 Seconds",
     description: "Submit claims in seconds with smart photo uploads, auto-filled forms, and built-in verification checks.",
     bullets: [
       {
@@ -26,7 +26,7 @@ export const benefits: IBenefit[] = [
     imageSrc: "/images/demo1.gif"
   },
   {
-    title: "Claim Communication",
+    title: "Easy Claim Communication",
     description: "Keep everyone updated with instant alerts, email/SMS updates, and smart follow-up nudges.",
     bullets: [
       {
@@ -48,7 +48,7 @@ export const benefits: IBenefit[] = [
     imageSrc: "/images/hero2.png"
   },
   {
-    title: "Claim Reconciliation",
+    title: "Simple Reconciliation",
     description: "Finish the loop with credits, AP adjustments, and synced ledgers — no spreadsheets needed.",
     bullets: [
       {
