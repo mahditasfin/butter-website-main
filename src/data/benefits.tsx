@@ -4,7 +4,7 @@ import { IBenefit } from "@/types";
 
 export const benefits: IBenefit[] = [
   {
-    title: "Submit Claims in 60 Seconds",
+    title: "60-Second Claim",
     description: "Submit claims in seconds with smart photo uploads, auto-filled forms, and built-in verification checks.",
     bullets: [
       {
